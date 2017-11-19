@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="/Card.js"></script>
+    <script type="text/javascript" src="/hc.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>FractalWiki</title>
+  </head>
+
+  <style media="screen">
+    .w3-modal {
+      display: block;
+    }
+  </style>
+
+  <body>
+    <div id="app">
+
+      <div v-if="showNewSubCardModal" class="w3-modal">
+
+      </div>
+
+      <h1 class="w3-center">Fractal Wiki</h1>
+
+      <div class="w3-row">
+        <button @click="createRootCard()" class="w3-button w3-blue" type="button" name="button">new root card</button>
+      </div>
+
+      <div class="w3-container">
+        <h4>My cards</h4>
+
+        <div class="w3-row-padding">
+          <div class="w3-col m4" v-for="card in myCards">
+            <div class="w3-card-2 w3-padding w3-round">
+              <div class="w3-row">
+                <b>{{ card.title }}</b>
+                <p>{{ card.content }}</p>
+              </div>
+              <div class="w3-row">
+                <button type="button" name="button">showSubcards</button>
+              </div>
+              <div @click="showNewSubCard(card)" class="w3-row">
+                <button class="w3-button w3-blue" type="button" name="button">New subcard</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="/app.js"></script>
+
+  </body>
+</html>

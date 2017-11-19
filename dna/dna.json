@@ -1,0 +1,97 @@
+{
+    "Version": 1,
+    "UUID": "bd3ba11c-a98b-49b5-8206-ca7ceb79618e",
+    "Name": "FractalWiki",
+    "Properties": {
+        "description": "",
+        "language": "en"
+    },
+    "PropertiesSchemaFile": "properties_schema.json",
+    "BasedOn": {
+        "H": null
+    },
+    "Zomes": [
+        {
+            "Name": "Card",
+            "Description": "",
+            "CodeFile": "Card.js",
+            "Entries": [
+                {
+                    "Name": "Card",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "Card.json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "card_links",
+                    "DataFormat": "links",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": ""
+                },
+                {
+                    "Name": "favorites_links",
+                    "DataFormat": "links",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": ""
+                }
+            ],
+            "RibosomeType": "js",
+            "Functions": [
+                {
+                    "Name": "cardCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "cardRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "cardUpdate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "cardDelete",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "cardLink",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "cardGetLinks",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "cardAddAsFavorite",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "cardGetMyFavorites",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                }
+            ],
+            "BridgeFuncs": null,
+            "BridgeTo": ""
+        }
+    ],
+    "RequiresVersion": 0,
+    "DHTConfig": {
+        "HashType": "sha2-256",
+        "NeighborhoodSize": 0
+    },
+    "Progenitor": {
+        "Identity": "",
+        "PubKey": null
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Card Schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "version"
+  ]
+}

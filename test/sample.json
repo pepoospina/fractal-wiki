@@ -1,0 +1,130 @@
+[
+    {
+        "Convey": "Create card test",
+        "Zome": "Card",
+        "FnName": "cardCreate",
+        "Input": {
+            "content": "Content of the card",
+            "title": "First card"
+        },
+        "Output": "\"%h0%\"",
+        "Err": "",
+        "Regexp": "",
+        "Time": 0,
+        "Wait": 0,
+        "Exposure": "public",
+        "Raw": false,
+        "Repeat": 0
+    },
+    {
+        "Convey": "Read card test",
+        "Zome": "Card",
+        "FnName": "cardRead",
+        "Input": "\"%r1%\"",
+        "Regexp": "{\"content\":\"Content of the card\",\"timestamp\":[0-9]+,\"title\":\"First card\",\"version\":0}",
+        "Err": "",
+        "Time": 0,
+        "Wait": 0,
+        "Exposure": "public",
+        "Raw": false,
+        "Repeat": 0
+    },
+    {
+        "Convey": "Create another card",
+        "Zome": "Card",
+        "FnName": "cardCreate",
+        "Input": {
+            "content": "Content of the second card",
+            "title": "Second card"
+        },
+        "Output": "\"%h0%\"",
+        "Err": "",
+        "Regexp": "",
+        "Time": 0,
+        "Wait": 0,
+        "Exposure": "public",
+        "Raw": false,
+        "Repeat": 0
+    },
+    {
+        "Convey": "Link as subcard",
+        "Zome": "Card",
+        "FnName": "cardLink",
+        "Input": {
+            "theChild": "%h%",
+            "theParent": "%h1%"
+        },
+        "Output": "\"%h0%\"",
+        "Err": "",
+        "Regexp": "",
+        "Time": 0,
+        "Wait": 0,
+        "Exposure": "public",
+        "Raw": false,
+        "Repeat": 0
+    },
+    {
+        "Convey": "Get linked cards",
+        "Zome": "Card",
+        "FnName": "cardGetLinks",
+        "Input": "\"%h2%\"",
+        "Output": "[{\"card\":\"%h1%\",\"type\":\"CHILD_OF\"}]",
+        "Err": "",
+        "Regexp": "",
+        "Time": 0,
+        "Wait": 0,
+        "Exposure": "public",
+        "Raw": false,
+        "Repeat": 0
+    },
+    {
+      "Convey": "Add card as favorite",
+      "Zome": "Card",
+      "FnName": "cardAddAsFavorite",
+      "Input": "%result0%",
+      "Output": "\"%h0%\"",
+      "Err": "",
+      "Regexp": "",
+      "Exposure": "public",
+      "Raw": false
+    },
+    {
+      "Convey": "Get my favorites",
+      "Zome": "Card",
+      "FnName": "cardGetMyFavorites",
+      "Input": "",
+      "Output": "[%result0%]",
+      "Err": "",
+      "Regexp": "",
+      "Exposure": "public",
+      "Raw": false
+    },
+    {
+      "Convey": "Create card with parent",
+      "Zome": "Card",
+      "FnName": "cardCreate",
+      "Input": {
+          "parentHash": "%h2%",
+          "content": "Content of the third card",
+          "title": "Third card"
+      },
+      "Output": "\"%h1%\"",
+      "Err": "",
+      "Regexp": "",
+      "Exposure": "public",
+      "Raw": false
+    },
+    {
+      "Convey": "Get linked cards",
+      "Zome": "Card",
+      "FnName": "cardGetLinks",
+      "Input": "%result2%",
+      "Output": "[{\"card\":\"%h1%\",\"type\":\"CHILD_OF\"},{\"card\":%result0%,\"type\":\"PARENT_OF\"}]",
+      "Err": "",
+      "Time": 0,
+      "Wait": 0,
+      "Exposure": "public",
+      "Raw": false,
+      "Repeat": 0
+    }
+]
