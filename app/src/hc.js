@@ -21,6 +21,11 @@ const send = function (fn,data,resultFn) {
     ;
 };
 
+const isErr = function (result) {
+  return ((typeof result === "object") && (result.name === "HolochainError"));
+}
+
 export {
-  send
+  send,
+  isErr
 }

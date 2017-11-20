@@ -1,0 +1,140 @@
+
+.fadeenter-enter-active {
+  transition: opacity .9s
+}
+
+.fadeenter-enter {
+  opacity: 0
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.slide-right-enter-active {
+  animation: slide-right-in 0.5s ease forwards;
+}
+
+.slide-right-leave-active {
+  animation: slide-right-out 0.5s ease forwards;
+}
+
+.slide-left-enter-active {
+  animation: slide-left-in 0.5s ease forwards;
+}
+
+.slide-left-leave-active {
+  animation: slide-left-out 0.5s ease forwards;
+}
+
+.slide-up-enter-active {
+  animation: slide-up-in 0.5s ease forwards;
+}
+
+.slide-up-leave-active {
+  animation: slide-up-out 0.5s ease forwards;
+}
+
+.slide-down-enter-active {
+  animation: slide-down-in 0.5s ease forwards;
+}
+
+.slide-down-leave-active {
+  animation: slide-down-out 0.5s ease forwards;
+}
+
+.slide-down-up-enter-active {
+  animation: slide-down-in 0.5s ease forwards;
+}
+
+.slide-down-up-leave-active {
+  animation: slide-up-out 0.5s ease forwards;
+}
+
+.slide-right-left-enter-active {
+  animation: slide-right-in 0.5s ease forwards;
+}
+
+.slide-right-left-leave-active {
+  animation: slide-left-out 0.5s ease forwards;
+}
+
+.slide-left-right-enter-active {
+  animation: slide-left-in 0.5s ease forwards;
+}
+
+.slide-left-right-leave-active {
+  animation: slide-right-out 0.5s ease forwards;
+}
+
+@keyframes slide-right-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-left-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-left-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-down-in {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slide-up-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
