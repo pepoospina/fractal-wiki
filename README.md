@@ -1,6 +1,4 @@
-# Clutter
-
-[![Code Status](https://img.shields.io/badge/Prototype-orange.svg)](https://github.com/Holochain/clutter#feature-roadmap-and-current-progress)
+# Fractal-wiki
 
 **Nestable card based wiki built on holochain**
 Prototype of a wiki using a card-based model where cards can be nested in card.
