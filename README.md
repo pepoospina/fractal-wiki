@@ -41,6 +41,12 @@ npm run dev
 ```
 This is configured to proxy the http requests over to the running localhost:4141 holochain instance.
 
+To build the UI, still from the `app` directory, run
+``` bash
+npm run build
+
+```
+this will put the output files within the `ui` directory. 
 
 ### Tests
 To run all the stand alone tests:
