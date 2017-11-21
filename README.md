@@ -40,19 +40,16 @@ Fractal wiki UI is built with Vue.  To work on the UI in dev mode you can go int
 ``` bash
 npm install
 npm run dev
-
 ```
+
 This is configured to proxy the http requests over to the running localhost:4141 holochain instance.
 
 To build the UI so it can be served directly by the holochain instance: `cd` to the `app` directory, run
 ``` bash
 npm run build
-
 ```
+
 this will move the output files to the `ui` directory.
-
-```
-this will put the output files within the `ui` directory.
 
 ### Tests
 To run all the stand alone tests:
